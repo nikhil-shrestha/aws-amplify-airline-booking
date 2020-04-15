@@ -1,0 +1,15 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-awsserverlessairline-master-131539-authRole",
+            "UnauthRoleArn": "arn:aws:iam::350992007016:role/amplify-awsserverlessairline-master-131539-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::350992007016:role/amplify-awsserverlessairline-master-131539-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-awsserverlessairline-master-131539-deployment",
+            "UnauthRoleName": "amplify-awsserverlessairline-master-131539-unauthRole",
+            "StackName": "amplify-awsserverlessairline-master-131539",
+            "StackId": "arn:aws:cloudformation:eu-west-2:350992007016:stack/amplify-awsserverlessairline-master-131539/0f92e180-7eeb-11ea-84b5-029d9e7b7264",
+            "AmplifyAppId": "d1p1ybug5x5yz7"
+        }
+    }
+}
