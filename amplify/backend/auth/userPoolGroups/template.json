@@ -1,0 +1,68 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "authawsserverlessairlineedd8a02bedd8a02bUserPoolId": {
+            "Type": "String",
+            "Default": "authawsserverlessairlineedd8a02bedd8a02bUserPoolId"
+        },
+        
+        "authawsserverlessairlineedd8a02bedd8a02bAppClientID": {
+            "Type": "String",
+            "Default": "authawsserverlessairlineedd8a02bedd8a02bAppClientID"
+        },
+        "authawsserverlessairlineedd8a02bedd8a02bAppClientIDWeb": {
+            "Type": "String",
+            "Default": "authawsserverlessairlineedd8a02bedd8a02bAppClientIDWeb"
+        },
+        "AuthRoleArn": {
+            "Type": "String"
+        },
+        "UnauthRoleArn": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+    
+        "AdminsGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "Admins",
+              "Precedence" : 1,
+              
+              "UserPoolId" : {
+                "Ref": "authawsserverlessairlineedd8a02bedd8a02bUserPoolId"
+              } 
+            }
+        },
+        
+    
+        "EditorsGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "Editors",
+              "Precedence" : 2,
+              
+              "UserPoolId" : {
+                "Ref": "authawsserverlessairlineedd8a02bedd8a02bUserPoolId"
+              } 
+            }
+        },
+        
+    
+    
+    },
+    
+}
